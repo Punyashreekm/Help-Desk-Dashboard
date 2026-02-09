@@ -8,10 +8,12 @@ import { Input } from "@/components/ui/input";
 
 export function AppLayout() {
   return (
-    <div className="flex min-h-screen bg-transparent">
-      <Sidebar />
-      <div className="flex flex-1 flex-col">
-        <header className="flex items-center justify-between border-b bg-background/80 px-6 py-4 backdrop-blur">
+    <div className="min-h-screen bg-transparent">
+      <aside className="fixed left-0 top-0 h-screen w-64 border-r bg-background/80 backdrop-blur">
+        <Sidebar />
+      </aside>
+      <div className="ml-64 flex min-h-screen flex-col">
+        <header className="fixed left-64 right-0 top-0 z-20 flex items-center justify-between border-b bg-background/80 px-6 py-4 backdrop-blur">
           <div>
             <p className="text-xs font-semibold uppercase text-muted-foreground">Helpdesk</p>
             <h1 className="text-xl font-semibold">Ticketing Dashboard</h1>
@@ -29,7 +31,7 @@ export function AppLayout() {
             </Avatar>
           </div>
         </header>
-        <main className="flex-1 p-6">
+        <main className="mt-[72px] flex-1 overflow-y-auto">
           <Outlet />
         </main>
       </div>

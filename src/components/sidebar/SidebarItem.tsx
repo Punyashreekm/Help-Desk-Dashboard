@@ -1,4 +1,5 @@
 import { type ReactNode } from "react";
+import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
@@ -7,11 +8,13 @@ type SidebarItemProps = {
   icon: ReactNode;
   count?: number;
   active?: boolean;
+  to: string;
 };
 
-export function SidebarItem({ label, icon, count, active }: SidebarItemProps) {
+export function SidebarItem({ label, icon, count, active, to }: SidebarItemProps) {
   return (
-    <div
+    <Link
+      to={to}
       className={cn(
         "flex items-center justify-between rounded-lg px-3 py-2 text-sm font-medium transition-colors",
         active
@@ -30,6 +33,6 @@ export function SidebarItem({ label, icon, count, active }: SidebarItemProps) {
           {count}
         </Badge>
       )}
-    </div>
+    </Link>
   );
 }

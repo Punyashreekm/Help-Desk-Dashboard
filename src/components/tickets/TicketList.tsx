@@ -14,8 +14,8 @@ export function TicketList({ tickets, activeTicketId }: TicketListProps) {
         <p className="text-xs font-semibold uppercase text-muted-foreground">Tickets</p>
         <h2 className="mt-1 text-lg font-semibold">Latest assigned</h2>
       </div>
-      <ScrollArea className="h-[calc(100vh-220px)] pr-3">
-        <div className="flex flex-col gap-3">
+      <ScrollArea className="h-[calc(100vh-220px)]">
+        <div className="flex flex-col divide-y rounded-xl border bg-card">
           {tickets.map((ticket) => (
             <TicketItem
               key={ticket.id}
