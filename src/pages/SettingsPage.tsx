@@ -7,7 +7,7 @@ import { Separator } from "@/components/ui/separator";
 
 export function SettingsPage() {
   return (
-    <div className="grid gap-6">
+    <div className="grid gap-6 p-6">
       <div>
         <p className="text-xs font-semibold uppercase text-muted-foreground">Workspace</p>
         <h2 className="mt-1 text-xl font-semibold">Settings</h2>
@@ -45,7 +45,7 @@ export function SettingsPage() {
       </Card>
 
       <div className="grid gap-4 lg:grid-cols-3">
-        <Card className="p-5">
+        <Card className="p-6">
           <div className="flex items-center gap-3">
             <div className="rounded-full bg-muted p-2 text-muted-foreground">
               <Bell className="h-4 w-4" />

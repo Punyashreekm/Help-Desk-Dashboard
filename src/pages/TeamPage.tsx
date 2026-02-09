@@ -20,7 +20,7 @@ const statusStyles: Record<string, string> = {
 
 export function TeamPage() {
   return (
-    <div className="grid gap-6">
+    <div className="grid gap-6 p-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div>
           <p className="text-xs font-semibold uppercase text-muted-foreground">People</p>
@@ -32,9 +32,9 @@ export function TeamPage() {
         </Button>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+      <div className="grid gap-4 p-4 md:grid-cols-2 xl:grid-cols-3">
         {team.map((member) => (
-          <Card key={member.name} className="p-5">
+          <Card key={member.name} className="p-6">
             <div className="flex items-start justify-between">
               <div className="flex items-center gap-3">
                 <Avatar className="h-12 w-12">
